@@ -1,0 +1,22 @@
+version: '2'
+services:
+  mimecast-get-siem-logs:
+    image: smck83/mimecast-get-siem-logs
+    environment:
+      APP_ID: <-- your Mimecast app id -->
+      APP_KEY: <-- your Mimecast app key -->
+      EMAIL_ADDRESS: <-- your Mimecast account e-mail address -->
+      SECRET_KEY: <-- your Mimecast secret key -->
+      ACCESS_KEY: <-- your Mimecast access key -->
+      SYSLOG_OUTPUT: 'False'
+      SYSLOG_SERVER: 127.0.0.1
+      SYSLOG_PORT: '514'
+      DELETE_FILES: 'True'
+      LOG_FILE_THRESHOLD: '10000'
+      SCHEDULE_DELAY: '90'
+    stdin_open: true
+    volumes:
+    - /your/path/mimecast/chk:/mimecast/chk
+    - /your/path/mimecast/logs:/mimecast/logs
+    tty: true
+    
