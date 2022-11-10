@@ -24,7 +24,7 @@ You can run this in a docker container using [Docker-Compose.yaml](https://githu
        -v /your/mimecast/path/logs:/mimecast/logs \
        -e APP_ID='<APP_ID>' \
        -e APP_KEY='<APP_KEY>' \
-       -e APP_KEY='<EMAIL_ADDRESS>' \
+       -e EMAIL_ADDRESS='<EMAIL_ADDRESS>' \
        -e SECRET_KEY='<SECRET_KEY>' \
        -e ACCESS_KEY='<ACCESS_KEY>' \
        -e SYSLOG_OUTPUT='FALSE' \
@@ -32,7 +32,7 @@ You can run this in a docker container using [Docker-Compose.yaml](https://githu
        -e SYSLOG_PORT='514' \
        -e DELETE_FILES='FALSE' \
        -e LOG_FILE_THRESHOLD='10000' \
-       -e SCHEDULE_DELAY='900' \
+       -e SCHEDULE_DELAY='1800' \
        smck83/mimecast-get-siem-logs
   
   ## Mimecast documentation
